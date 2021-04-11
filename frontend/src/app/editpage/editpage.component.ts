@@ -3,23 +3,22 @@ import { NgForm } from '@angular/forms';
 import { EmployeeService } from '../shared/employee.service';
 import { Employee } from '../shared/employee.model';
 import { Router } from '@angular/router';
-
+declare var M: any;
 
 @Component({
-  selector: 'app-addemployee',
-  templateUrl: './addemployee.component.html',
-  styleUrls: ['./addemployee.component.css'],
-  providers: [EmployeeService]
+  selector: 'app-editpage',
+  templateUrl: './editpage.component.html',
+  styleUrls: ['./editpage.component.css']
 })
-export class AddemployeeComponent implements OnInit {
-  message:string
+export class EditpageComponent implements OnInit {
+
   constructor(public employeeService: EmployeeService,
     public router: Router) { }
 
   ngOnInit() {
     this.resetForm();
     this.refreshEmployeeList();
-    this.employeeService.currentMessage.subscribe(message => this.message = message)
+    
   }
 
   resetForm(form?: NgForm) {
@@ -39,7 +38,7 @@ export class AddemployeeComponent implements OnInit {
       this.employeeService.postEmployee(form.value).subscribe((res) => {
         this.resetForm(form);
         this.refreshEmployeeList();
-        
+        M.toast({ html: 'Saved successfully', classes: 'rounded' });
         this.router.navigateByUrl('/home'); 
       });
     }
@@ -47,7 +46,7 @@ export class AddemployeeComponent implements OnInit {
       this.employeeService.putEmployee(form.value).subscribe((res) => {
         this.resetForm(form);
         this.refreshEmployeeList();
-        
+        M.toast({ html: 'Updated successfully', classes: 'rounded' });
       });
     }
   }
@@ -56,22 +55,6 @@ export class AddemployeeComponent implements OnInit {
     this.employeeService.getEmployeeList().subscribe((res) => {
       this.employeeService.employees = res as Employee[];
     });
-  }
-
-  onEdit(emp: Employee) {
-    
-    this.employeeService.selectedEmployee = emp;
-    console.log(this.employeeService.selectedEmployee);
-  }
-
-  onDelete(_id: string, form: NgForm) {
-    if (confirm('Are you sure to delete this record ?') == true) {
-      this.employeeService.deleteEmployee(_id).subscribe((res) => {
-        this.refreshEmployeeList();
-        this.resetForm(form);
-        
-      });
-    }
   }
 
 }

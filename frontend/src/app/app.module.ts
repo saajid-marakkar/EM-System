@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditpageComponent } from './editpage/editpage.component';
+import { EditemployeeComponent } from './editemployee/editemployee.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     SignupComponent,
     AddemployeeComponent,
-    FooterComponent
+    FooterComponent,
+    EditpageComponent,
+    EditemployeeComponent
   ],
   imports: [
     BrowserModule,

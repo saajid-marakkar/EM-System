@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../shared/employee.service';
 import { Employee } from '../shared/employee.model';
 import { ActivatedRoute, Router } from '@angular/router';
+
+
+
+
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
@@ -56,6 +60,18 @@ export class EmployeeDetailsComponent implements OnInit {
   newMessage(){
     this.employeeService.changeMessage("testing service");
     
+  }
+  onDelete(id: string) {
+    if (confirm('Are you sure to delete this record ?') == true) {
+      this.employeeService.deleteEmployee(id).subscribe((res) => {
+        this.refreshEmployeeList();
+      });
+    }
+    this.router.navigateByUrl('/home');
+  }
+  onEdit(id: string) {
+    console.log("on edit")
+    this.router.navigate(['/editemployee' , id]);
   }
 
 }
