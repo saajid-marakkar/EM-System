@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="text-center add-employee">
+    <button class="btn btn-outline-success" (click)="addEmployee()">add employee</button>
+  </div>
+</div>
+<div class="employee-list container">
+  <ul *ngFor="let emp of employeeService.employees" class="empolyee-listing">
+    <li>{{emp.name}}</li>
+    <li>{{emp.position}}</li>
+    <li ><a  class="btn btn-outline-primary" (click)="viewEmployee(emp)" id="view-button" >view</a></li> 
+    <li ><a  class="btn btn-outline-secondary" (click)="onEdit(emp)" id="view-button" >edit</a></li> 
+  </ul>
+</div>
+
+

@@ -1,0 +1,23 @@
+<form #myform1="ngForm"(ngSubmit)="sendnewdata(myform1.value)" class="loginform">
+  <div class="text-center mx-auto">
+    <label class="labels">EMAIL ID</label><br>
+  </div>
+  <input type="email" ngModel name="email" required minlength="4" maxlength="20" #email="ngModel"><br>
+  <div *ngIf="email.touched">
+      <div class="alert alert danger "*ngIf="email.errors?.required">
+          This field is required
+      </div>
+  </div>
+  <div class="text-center mx-auto">
+    <label class="labels" >PASSWORD</label><br>
+  </div>
+  <input type="password" ngModel name="password" required pattern="[a-z]+[0-9]" #password="ngModel"><br>
+  <div *ngIf="password.touched">
+      <div class="alert alert danger "*ngIf="password.errors?.required">
+          This field is required
+      </div>
+  </div>
+  <div id="login-button "  class="text-center mx-auto">
+    <button type="submit" value="SUBMIT" class="btn btn-outline-primary" >login</button>
+  </div>
+</form>

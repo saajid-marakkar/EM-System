@@ -1,0 +1,21 @@
+.empolyee-listing{
+    display: flex;
+    justify-content: space-evenly;
+    border: black 1px solid;
+    align-items: center;
+    height: 190%;
+    filter: drop-shadow(2px 1px 3px rgba(90, 89, 89, 0.986));
+    background-color: white;
+}
+.employee-list{
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.add-employee{
+    margin-top: 20px;
+}
+/* #view-button{
+    width: 60px;
+    height: 30px;
+} */
