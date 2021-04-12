@@ -24,6 +24,11 @@ export class EmployeeDetailsComponent implements OnInit {
   position:string
   office:string
   salary:number
+  dateofjoining:string
+  dateofbirth:string
+  department:string
+  skills:string
+  leaves:number
 
   paramQuery = '';
   constructor(public employeeService: EmployeeService,
@@ -52,6 +57,11 @@ export class EmployeeDetailsComponent implements OnInit {
       this.position = res.position
       this.office = res.office
       this.salary = res.salary
+      this.dateofjoining = res.dateofjoining
+      this.dateofbirth = res.dateofbirth
+      this.department = res.department
+      this.skills = res.skills
+      this.leaves = res.leaves
       console.log("result 2",this.employeeData)
     }); 
     

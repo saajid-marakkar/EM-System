@@ -4,4 +4,9 @@ export class Employee {
     position: string;
     office: string;
     salary: number;
+    dateofjoining: string;
+    dateofbirth: string;
+    department: string;
+    skills: string;
+    leaves: number
 }

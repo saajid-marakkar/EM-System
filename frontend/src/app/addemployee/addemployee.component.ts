@@ -30,7 +30,12 @@ export class AddemployeeComponent implements OnInit {
       name: "",
       position: "",
       office: "",
-      salary: null
+      salary: null,
+      dateofjoining: "",
+      dateofbirth: "",
+      department: "",
+      skills: "",
+      leaves: null
     }
   }
 

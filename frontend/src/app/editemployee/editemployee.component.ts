@@ -34,7 +34,12 @@ export class EditemployeeComponent implements OnInit {
       name: res.name,
       position: res.position,
       office: res.office,
-      salary: res.salary
+      salary: res.salary,
+      dateofjoining: res.dateofjoining,
+      dateofbirth: res.dateofbirth,
+      department: res.department,
+      skills: res.skills,
+      leaves: res.leaves
     }
       
     }); 

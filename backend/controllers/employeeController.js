@@ -28,6 +28,11 @@ router.post('/', (req, res) => {
         position: req.body.position,
         office: req.body.office,
         salary: req.body.salary,
+        dateofjoining: req.body.dateofjoining,
+        dateofbirth: req.body.dateofbirth,
+        department: req.body.department,
+        skills: req.body.skills,
+        leaves: req.body.leaves,
     });
     emp.save((err, doc) => {
         if (!err) { res.send(doc); }
@@ -44,6 +49,11 @@ router.put('/:id', (req, res) => {
         position: req.body.position,
         office: req.body.office,
         salary: req.body.salary,
+        dateofjoining: req.body.dateofjoining,
+        dateofbirth: req.body.dateofbirth,
+        department: req.body.department,
+        skills: req.body.skills,
+        leaves: req.body.leaves,
     };
     Employee.findByIdAndUpdate(req.params.id, { $set: emp }, { new: true }, (err, doc) => {
         if (!err) { res.send(doc); }

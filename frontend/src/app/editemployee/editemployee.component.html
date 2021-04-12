@@ -28,6 +28,31 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
+                  <input type="date" name="dateofjoining" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.dateofjoining" placeholder="Enter date of joining">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="date" name="dateofbirth" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.dateofbirth" placeholder="Enter date of birth">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="department" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.department" placeholder="Enter department">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="skills" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.skills" placeholder="Enter skills">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="leaves" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.leaves" placeholder="Enter leaves">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
                   <button class="btn btn-custom right" type="button" (click)="resetForm(employeeForm)">Reset</button>
                   <button class="btn btn-custom right" type="submit" [disabled]="!employeeForm.valid">Submit</button>
                 </div>
