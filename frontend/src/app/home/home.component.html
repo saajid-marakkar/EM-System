@@ -7,8 +7,9 @@
   <ul *ngFor="let emp of employeeService.employees" class="empolyee-listing">
     <li>{{emp.name}}</li>
     <li>{{emp.position}}</li>
-    <li ><a  class="btn btn-outline-primary" (click)="viewEmployee(emp)" id="view-button" >view</a></li> 
+    <li ><a  class="btn btn-outline-primary" (click)="viewEmployee(emp._id)" id="view-button" >view</a></li> 
     <li ><a  class="btn btn-outline-secondary" (click)="onEdit(emp)" id="view-button" >edit</a></li> 
+    <li ><a  class="btn btn-outline-secondary" (click)="onDelete(emp._id)" id="view-button" >delete</a></li> 
   </ul>
 </div>
 

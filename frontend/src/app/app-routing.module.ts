@@ -9,7 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
-  {path:'empdetail',component:EmployeeDetailsComponent}, 
+  {path:'empdetail/:id',component:EmployeeDetailsComponent}, 
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'addemployee',component:AddemployeeComponent}

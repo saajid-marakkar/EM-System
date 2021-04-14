@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AddemployeeComponent } from './addemployee/addemployee.component';
     EmployeeDetailsComponent,
     LoginComponent,
     SignupComponent,
-    AddemployeeComponent
+    AddemployeeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

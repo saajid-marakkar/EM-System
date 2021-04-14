@@ -12,24 +12,25 @@ declare var M: any;
   providers: [EmployeeService]
 })
 export class AddemployeeComponent implements OnInit {
-
+  message:string
   constructor(public employeeService: EmployeeService,
     public router: Router) { }
 
   ngOnInit() {
     this.resetForm();
     this.refreshEmployeeList();
+    this.employeeService.currentMessage.subscribe(message => this.message = message)
   }
 
   resetForm(form?: NgForm) {
     if (form)
       form.reset();
     this.employeeService.selectedEmployee = {
-      _id: "fbfx",
-      name: "cxbfb",
-      position: "xfbf",
-      office: "xfb",
-      salary: 3
+      _id: "",
+      name: "",
+      position: "",
+      office: "",
+      salary: null
     }
   }
 

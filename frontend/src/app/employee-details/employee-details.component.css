@@ -1,0 +1,13 @@
+.detail{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.details{
+    margin-left: 300px;
+    border: black 2px solid;
+}
+.inner{
+    width: 150px;
+    margin: 30px;
+}

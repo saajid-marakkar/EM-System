@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
     this.x=val
   }
   ngOnInit(): void {
+    
   }
 
 }
